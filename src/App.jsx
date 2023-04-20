@@ -1,3 +1,17 @@
+import { ContentSwitcher } from "./ContentSwitcher.jsx";
+
+function InputOriginal() {
+  return <textarea>original</textarea>;
+}
+
+function InputModified() {
+  return <textarea>modified</textarea>;
+}
+
+function InputLabels() {
+  return <textarea>labels</textarea>;
+}
+
 export default function App() {
   return (
     <>
@@ -11,10 +25,11 @@ export default function App() {
         <a href="https://github.com/mateusznowakdev/keyboard-reducer">Source Code</a> &middot;{" "}
         <a href="https://mateusznowak.dev">Back to Home Page</a>
       </p>
-      <textarea>q w e r t y u i o p</textarea>
-      <div>
-        <strong>Original</strong> &middot; <a href="#">Modified</a> &middot; <a href="#">Labels</a>
-      </div>
+      <ContentSwitcher>
+        <InputOriginal title="Original" />
+        <InputModified title="Modified" />
+        <InputLabels title="Labels" />
+      </ContentSwitcher>
     </>
   );
 }
