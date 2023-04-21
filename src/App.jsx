@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 
-import { ContentSwitcher } from "./ContentSwitcher.jsx";
+import { ContentSwitcher } from "./components/ContentSwitcher.jsx";
+import { TextArea } from "./components/TextArea.jsx";
 
 import pythonScript from "./main.py?raw";
 
@@ -12,10 +13,6 @@ function bridge(fn) {
   }
 
   return inner;
-}
-
-function Input({ onChange, value }) {
-  return <textarea onChange={onChange} value={value}></textarea>;
 }
 
 export default function App() {
@@ -90,9 +87,9 @@ export default function App() {
         <a href="https://mateusznowak.dev">Back to Home Page</a>
       </p>
       <ContentSwitcher>
-        <Input onChange={updateInputOriginal} title="Original" value={inputOriginal} />
-        <Input onChange={updateInputModified} title="Modified" value={inputModified} />
-        <Input onChange={updateInputLabels} title="Labels" value={inputLabels} />
+        <TextArea onChange={updateInputOriginal} title="Original" value={inputOriginal} />
+        <TextArea onChange={updateInputModified} title="Modified" value={inputModified} />
+        <TextArea onChange={updateInputLabels} title="Labels" value={inputLabels} />
       </ContentSwitcher>
       <ul>
         <li>{JSON.stringify(outputOriginal)}</li>
