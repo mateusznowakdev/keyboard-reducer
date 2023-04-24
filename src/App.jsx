@@ -115,8 +115,13 @@ export default function App() {
         </p>
         <p>Powered by React and Pyodide.</p>
         <p>
-          <a href="https://github.com/mateusznowakdev/keyboard-reducer">Source Code</a> &middot;{" "}
-          <a href="https://mateusznowak.dev">Back to Home Page</a>
+          <a href="https://github.com/mateusznowakdev/keyboard-reducer" target="_blank">
+            Source Code
+          </a>
+          <> &middot; </>
+          <a href="https://mateusznowak.dev" target="_blank">
+            Back to Home Page
+          </a>
         </p>
       </header>
       <main>
