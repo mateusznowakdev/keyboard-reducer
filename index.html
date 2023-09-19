@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="Create new layouts for compact custom keyboards and compare against full-size layout"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Keyboard Layout Designer</title>
+    <script type="module" crossorigin src="./assets/index-3e49ea01.js"></script>
+    <link rel="stylesheet" href="./assets/index-7b7dd4b8.css">
+  </head>
+  <body>
+    <header class="container-fluid my-4">
+      <a class="home" href="https://mateusznowak.dev" target="_blank">Back to Home Page</a>
+      <h1>Keyboard Layout Designer</h1>
+    </header>
+    <main class="container-fluid my-4">
+      <hr />
+      <div id="root"></div>
+      <hr />
+      <h2>What is this?</h2>
+      <p>
+        Back in late 2022, I was working on a portable (as in <i>handheld</i>) custom keyboard, with
+        greatly reduced number of keys and full support for Polish diacritics. You can already buy
+        small keyboards online, but there is no <code>AltGr</code> button or there are other
+        usability issues. Creating custom keyboard was an excuse to try out a modern non-Arduino
+        microcontroller, the KB2040 by Adafruit. Hopefully, one day I'll finish the project!
+      </p>
+      <p>
+        This web application can be used to render two keyboard layouts and get a list of missing
+        keys for each one. It's possible to, for instance, compare full-size and reduced layout
+        (60%, 40%, or even smaller). Some extra features are implemented (multiple layers,
+        horizontal and vertical offsets, custom labels) and presented on page load.
+      </p>
+      <p>
+        This utility does some complex data transformations using Python. However, there is no
+        backend, I don't want to deal with security and legal stuff. Python in the browser is
+        available thanks to the Pyodide project, it does the job well, but loading times may be
+        noticeable on lower-end hardware.
+      </p>
+      <h2>Source Code</h2>
+      <p>
+        Source code of this utility is available on
+        <a href="https://github.com/mateusznowakdev/keyboard-reducer" target="_blank"
+          >the GitHub repo</a
+        >.
+      </p>
+      <p>
+        You can find my other projects on
+        <a href="https://mateusznowak.dev" target="_blank">my home page</a>.
+      </p>
+      <hr />
+    </main>
+    <footer class="container-fluid my-4">&copy; 2023 Mateusz Nowak</footer>
+    
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.24.0/full/pyodide.js"></script>
+  </body>
+</html>
