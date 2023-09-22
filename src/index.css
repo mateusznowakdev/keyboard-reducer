@@ -1,18 +1,17 @@
 @font-face {
   font-family: "Source Sans";
-  src: url("SourceSans3VF-Upright.ttf.woff2");
+  src: url("./fonts/SourceSans3VF-Upright.ttf.woff2");
 }
 
 @font-face {
   font-family: "Source Sans";
   font-style: italic;
-  src: url("SourceSans3VF-Italic.ttf.woff2");
+  src: url("./fonts/SourceSans3VF-Italic.ttf.woff2");
 }
 
 body {
-  background-color: #efe;
-  color: #000;
-  font: 1rem "Source Sans", sans-serif;
+  font-family: "Source Sans", sans-serif;
+  font-size: 1rem;
   margin: 0 auto;
   max-width: 56rem;
   padding: 1rem;
@@ -32,7 +31,8 @@ strong {
 
 textarea {
   box-sizing: border-box;
-  font: 1rem "Source Sans", sans-serif;
+  font-family: "Source Sans", sans-serif;
+  font-size: 1rem;
   height: 10rem;
   resize: vertical;
   width: 100%;
