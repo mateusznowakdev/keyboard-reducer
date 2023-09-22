@@ -57,15 +57,18 @@ export default function App() {
   }
 
   function updateOutputOriginal() {
-    if (pythonFunctions) setOutputOriginal(pythonFunctions.extractLayout({ raw: inputOriginal }));
+    if (pythonFunctions)
+      setOutputOriginal(pythonFunctions.extractLayout({ raw: inputOriginal }));
   }
 
   function updateOutputModified() {
-    if (pythonFunctions) setOutputModified(pythonFunctions.extractLayout({ raw: inputModified }));
+    if (pythonFunctions)
+      setOutputModified(pythonFunctions.extractLayout({ raw: inputModified }));
   }
 
   function updateOutputLabels() {
-    if (pythonFunctions) setOutputLabels(pythonFunctions.extractLabels({ raw: inputLabels }));
+    if (pythonFunctions)
+      setOutputLabels(pythonFunctions.extractLabels({ raw: inputLabels }));
   }
 
   function updateOutputOriginalMissing() {
@@ -122,10 +125,18 @@ export default function App() {
       <Tabs className="mt-3" defaultActiveKey="original">
         <Tab disabled title="Render:"></Tab>
         <Tab eventKey="original" title="Original">
-          <Output labels={outputLabels} layout={outputOriginal} missing={outputOriginalMissing} />
+          <Output
+            labels={outputLabels}
+            layout={outputOriginal}
+            missing={outputOriginalMissing}
+          />
         </Tab>
         <Tab eventKey="modified" title="Modified">
-          <Output labels={outputLabels} layout={outputModified} missing={outputModifiedMissing} />
+          <Output
+            labels={outputLabels}
+            layout={outputModified}
+            missing={outputModifiedMissing}
+          />
         </Tab>
       </Tabs>
     </>

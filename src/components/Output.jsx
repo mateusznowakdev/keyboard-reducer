@@ -21,7 +21,11 @@ export function Output({ labels, layout, missing }) {
         }}
       >
         {layout.keys.map(([x, y, ids], idx) => (
-          <div className="key" key={idx} style={{ gridColumn: mapSize(x), gridRow: mapSize(y) }}>
+          <div
+            className="key"
+            key={idx}
+            style={{ gridColumn: mapSize(x), gridRow: mapSize(y) }}
+          >
             {ids.map((id, idx) => {
               const label = id in labels ? labels[id] : id;
               return <div key={idx}>{label || <>&nbsp;</>}</div>;
