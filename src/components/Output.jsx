@@ -29,7 +29,8 @@ export function Output({ labels, layout, missing }) {
           </div>
         ))}
       </div>
-      Missing: {missing.join(", ") || <i>none</i>}
+      <br />
+      <p className="mt-2 mb-0">Missing: {missing.join(", ") || <i>none</i>}</p>
     </div>
   );
 }

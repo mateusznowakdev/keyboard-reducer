@@ -1,11 +1,65 @@
+@font-face {
+  font-family: "Source Sans";
+  font-display: swap;
+  src: url("fonts/SourceSans3VF-Upright.ttf.woff2");
+}
+
+@font-face {
+  font-family: "Source Sans";
+  font-style: italic;
+  font-display: swap;
+  src: url("fonts/SourceSans3VF-Italic.ttf.woff2");
+}
+
+a {
+  text-decoration: none;
+}
+
+a.home::before {
+  content: "← ";
+}
+
+a.top::before {
+  content: "↑ ";
+  padding-left: 1rem;
+}
+
+body {
+  font-family: "Source Sans", sans-serif;
+}
+
+code {
+  background-color: #eee;
+  color: #000;
+  font-family: "Source Sans", sans-serif;
+  font-size: 1rem;
+}
+
+h1 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin: 1rem 0;
+}
+
+h2 {
+  font-size: 1.25rem;
+  font-weight: 400;
+  margin: 1rem 0;
+}
+
+.container-fluid {
+  width: 768px;
+}
+
 .keyboard {
-  display: grid;
+  display: inline-grid;
   gap: 0.25rem;
+  margin-right: 0.75rem;
 }
 
 .keyboard .key {
   align-items: center;
-  border: 1px solid #aaa;
+  border: 1px solid #ddd;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -16,17 +70,13 @@
   white-space: nowrap;
 }
 
+.nav-tabs {
+  border: 0;
+}
+
 .output {
-  background-color: #fff;
-  border: 1px solid #777;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
   overflow: auto hidden;
-  padding: 0.25rem;
-}
-
-.tabs {
-  padding-bottom: 0.5rem;
-}
-
-.tabs .tab.inactive {
-  display: none;
+  padding: 0.75rem;
 }

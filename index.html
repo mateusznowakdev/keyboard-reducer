@@ -6,13 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
   <body>
-    <header>
-      <a href="https://mateusznowak.dev">Back to Home Page</a>
-      <h1>Keyboard Reducer</h1>
+    <header class="container-fluid my-4">
+      <a class="home" href="https://mateusznowak.dev">Back to Home Page</a>
+      <h1>Keyboard Layout Designer</h1>
     </header>
-    <main>
+    <main class="container-fluid my-4">
       <hr />
       <div id="root"></div>
+      <hr />
       <h2>What is this?</h2>
       <p>
         Describe original and modified layouts below and check if you're missing anything. This
@@ -29,7 +30,9 @@
       </p>
       <hr />
     </main>
-    <footer>&copy; 2023 Mateusz Nowak</footer>
+    <footer class="container-fluid my-4">
+      &copy; 2023 Mateusz Nowak. <a class="top" href="#">To the top</a>
+    </footer>
     <script type="module" src="/src/main.jsx"></script>
     <script src="%VITE_PYODIDE_CDN_DOMAIN%/pyodide/v0.24.0/full/pyodide.js"></script>
   </body>
