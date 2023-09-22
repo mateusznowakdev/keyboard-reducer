@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
+import Tab from "react-bootstrap/Tab";
+import Tabs from "react-bootstrap/Tabs";
 
 import { Input } from "./components/Input.jsx";
 import { Output } from "./components/Output.jsx";
-import { Tabs } from "./components/Tabs.jsx";
 
 import { SAMPLE_LABELS, SAMPLE_MODIFIED, SAMPLE_ORIGINAL } from "./data.js";
 
@@ -106,24 +107,26 @@ export default function App() {
 
   return (
     <>
-      <Tabs title="Input">
-        <Input onChange={updateInputOriginal} title="Original" value={inputOriginal} />
-        <Input onChange={updateInputModified} title="Modified" value={inputModified} />
-        <Input onChange={updateInputLabels} title="Labels" value={inputLabels} />
+      <Tabs defaultActiveKey="original">
+        <Tab disabled title="Data:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"></Tab>
+        <Tab eventKey="original" title="Original">
+          <Input onChange={updateInputOriginal} value={inputOriginal} />
+        </Tab>
+        <Tab eventKey="modified" title="Modified">
+          <Input onChange={updateInputModified} value={inputModified} />
+        </Tab>
+        <Tab eventKey="labels" title="Labels">
+          <Input onChange={updateInputLabels} value={inputLabels} />
+        </Tab>
       </Tabs>
-      <Tabs title="Output">
-        <Output
-          labels={outputLabels}
-          layout={outputOriginal}
-          missing={outputOriginalMissing}
-          title="Original"
-        />
-        <Output
-          labels={outputLabels}
-          layout={outputModified}
-          missing={outputModifiedMissing}
-          title="Modified"
-        />
+      <Tabs className="mt-3" defaultActiveKey="original">
+        <Tab disabled title="Render:"></Tab>
+        <Tab eventKey="original" title="Original">
+          <Output labels={outputLabels} layout={outputOriginal} missing={outputOriginalMissing} />
+        </Tab>
+        <Tab eventKey="modified" title="Modified">
+          <Output labels={outputLabels} layout={outputModified} missing={outputModifiedMissing} />
+        </Tab>
       </Tabs>
     </>
   );

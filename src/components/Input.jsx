@@ -1,3 +1,5 @@
+import FormControl from "react-bootstrap/FormControl";
+
 export function Input({ onChange, value }) {
-  return <textarea onChange={onChange} value={value}></textarea>;
+  return <FormControl as="textarea" onChange={onChange} rows={6} value={value}></FormControl>;
 }
