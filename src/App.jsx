@@ -106,45 +106,25 @@ export default function App() {
 
   return (
     <>
-      <header>
-        <h1>Keyboard Reducer</h1>
-        <p>
-          Describe original and modified layouts below and check if you're missing anything. This
-          utility can be useful when designing keyboard layouts for compact keyboards (65%, 50%, 40%
-          and so on).
-        </p>
-        <p>Powered by React and Pyodide.</p>
-        <p>
-          <a href="https://github.com/mateusznowakdev/keyboard-reducer" target="_blank">
-            Source Code
-          </a>
-          <> &middot; </>
-          <a href="https://mateusznowak.dev" target="_blank">
-            Back to Home Page
-          </a>
-        </p>
-      </header>
-      <main>
-        <Tabs title="Input">
-          <Input onChange={updateInputOriginal} title="Original" value={inputOriginal} />
-          <Input onChange={updateInputModified} title="Modified" value={inputModified} />
-          <Input onChange={updateInputLabels} title="Labels" value={inputLabels} />
-        </Tabs>
-        <Tabs title="Output">
-          <Output
-            labels={outputLabels}
-            layout={outputOriginal}
-            missing={outputOriginalMissing}
-            title="Original"
-          />
-          <Output
-            labels={outputLabels}
-            layout={outputModified}
-            missing={outputModifiedMissing}
-            title="Modified"
-          />
-        </Tabs>
-      </main>
+      <Tabs title="Input">
+        <Input onChange={updateInputOriginal} title="Original" value={inputOriginal} />
+        <Input onChange={updateInputModified} title="Modified" value={inputModified} />
+        <Input onChange={updateInputLabels} title="Labels" value={inputLabels} />
+      </Tabs>
+      <Tabs title="Output">
+        <Output
+          labels={outputLabels}
+          layout={outputOriginal}
+          missing={outputOriginalMissing}
+          title="Original"
+        />
+        <Output
+          labels={outputLabels}
+          layout={outputModified}
+          missing={outputModifiedMissing}
+          title="Modified"
+        />
+      </Tabs>
     </>
   );
 }
