@@ -43,7 +43,10 @@ def _get_key_data(x, y, raw):
     y_offset = 0
 
     for layer_key in raw:
-        raw_id, *raw_props = layer_key.split(",")
+        if layer_key == ",":
+            raw_id, raw_props = ",", []
+        else:
+            raw_id, *raw_props = layer_key.split(",")
 
         if len(raw_id) > 1 and set(raw_id) == set("-"):
             ids.append(None)
