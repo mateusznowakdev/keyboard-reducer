@@ -32,7 +32,7 @@ def _iter_layers_transposed(layers):
     """Convert layer -> row -> col into row -> col -> layer"""
 
     for row_set in zip_longest(*layers, fillvalue=[]):
-        yield zip_longest(*row_set, fillvalue="-")
+        yield zip_longest(*row_set, fillvalue="--")
 
 
 def _get_key_data(x, y, raw):
@@ -45,7 +45,7 @@ def _get_key_data(x, y, raw):
     for layer_key in raw:
         raw_id, *raw_props = layer_key.split(",")
 
-        if set(raw_id) == set("-"):
+        if len(raw_id) > 1 and set(raw_id) == set("-"):
             ids.append(None)
         else:
             ids.append(raw_id)
