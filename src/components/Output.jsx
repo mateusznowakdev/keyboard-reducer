@@ -34,7 +34,7 @@ export function Output({ labels, layout, missing }) {
         ))}
       </div>
       <br />
-      <p className="mt-2 mb-0">Missing: {missing.join(", ") || <i>none</i>}</p>
+      <p className="mt-2 mb-0">Missing: {missing.join(" ") || <i>none</i>}</p>
     </div>
   );
 }

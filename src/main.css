@@ -62,8 +62,9 @@ h2 {
   border: 1px solid #ddd;
   display: flex;
   flex-direction: column;
+  font-size: 0.8rem;
   justify-content: center;
-  line-height: 0.8rem;
+  line-height: 1rem;
 }
 
 .keyboard .key div {
