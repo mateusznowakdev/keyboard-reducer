@@ -109,7 +109,7 @@ export default function App() {
   return (
     <>
       <Tabs defaultActiveKey="original">
-        <Tab disabled title="Data:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"></Tab>
+        <Tab disabled title="Data:&nbsp;&nbsp;&nbsp;&nbsp;"></Tab>
         <Tab eventKey="original" title="Original">
           <Input onChange={updateInputOriginal} value={inputOriginal} />
         </Tab>

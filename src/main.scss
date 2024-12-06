@@ -1,0 +1,65 @@
+$primary: #3377aa;
+
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/maps";
+@import "bootstrap/scss/mixins";
+@import "bootstrap/scss/utilities";
+
+@import "bootstrap/scss/root";
+@import "bootstrap/scss/containers";
+@import "bootstrap/scss/grid";
+@import "bootstrap/scss/forms";
+@import "bootstrap/scss/nav";
+
+@import "bootstrap/scss/helpers";
+
+@import "bootstrap/scss/utilities/api";
+
+body {
+  width: 60rem;
+}
+
+textarea {
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+#root {
+  background-color: #fff;
+  border: 1px solid #eee;
+  box-sizing: border-box;
+  padding: 1rem;
+}
+
+.nav-tabs {
+  border: 0;
+  margin-top: 0;
+}
+
+.keyboard {
+  display: inline-grid;
+  gap: 0.25rem;
+  margin-right: 0.75rem;
+}
+
+.keyboard .key {
+  align-items: center;
+  border: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  font-size: 0.8rem;
+  justify-content: center;
+  line-height: 0.85rem;
+}
+
+.keyboard .key div {
+  white-space: nowrap;
+}
+
+.output {
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  overflow: auto hidden;
+  padding: 0.75rem;
+}
