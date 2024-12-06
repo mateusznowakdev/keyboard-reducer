@@ -4,9 +4,7 @@ import Tabs from "react-bootstrap/Tabs";
 
 import { Input } from "./components/Input.jsx";
 import { Output } from "./components/Output.jsx";
-
 import { SAMPLE_LABELS, SAMPLE_MODIFIED, SAMPLE_ORIGINAL } from "./data.js";
-
 import pythonScript from "./main.py?raw";
 
 function bridge(fn) {
